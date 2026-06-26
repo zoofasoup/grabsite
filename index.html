@@ -371,35 +371,42 @@
             </div>
             
             <div class="bg-white/5 border border-slate-800 backdrop-blur-md p-8 md:p-12 rounded-3xl">
-                <form class="space-y-6" onsubmit="event.preventDefault(); alert('In a real setup, this would submit the form!');">
+                <div data-fs-success class="mb-6 p-4 rounded-lg bg-brand-green/10 text-brand-green border border-brand-green/20 font-bold empty:hidden"></div>
+                <div data-fs-error class="mb-6 p-4 rounded-lg bg-red-500/10 text-red-400 border border-red-500/20 font-bold empty:hidden"></div>
+
+                <form id="contact-form" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
-                            <input type="text" id="name" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                            <input type="text" id="name" name="name" data-fs-field required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                            <span data-fs-error="name" class="text-red-400 text-sm mt-1 block empty:hidden"></span>
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                            <input type="email" id="email" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                            <input type="email" id="email" name="email" data-fs-field required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                            <span data-fs-error="email" class="text-red-400 text-sm mt-1 block empty:hidden"></span>
                         </div>
                     </div>
                     
                     <div>
                         <label for="businessName" class="block text-sm font-medium text-slate-300 mb-2">Business Name</label>
-                        <input type="text" id="businessName" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                        <input type="text" id="businessName" name="businessName" data-fs-field required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                        <span data-fs-error="businessName" class="text-red-400 text-sm mt-1 block empty:hidden"></span>
                     </div>
                     
                     <div>
                         <label for="businessType" class="block text-sm font-medium text-slate-300 mb-2">Business Type</label>
-                        <select id="businessType" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition appearance-none">
+                        <select id="businessType" name="businessType" data-fs-field required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition appearance-none">
                             <option value="">Select your industry...</option>
                             <option value="cleaning">Cleaning</option>
                             <option value="landscaping">Landscaping</option>
                             <option value="plumbing-hvac">Plumbing / HVAC</option>
                             <option value="other">Other</option>
                         </select>
+                        <span data-fs-error="businessType" class="text-red-400 text-sm mt-1 block empty:hidden"></span>
                     </div>
                     
-                    <button type="submit" class="w-full bg-brand-green hover:bg-brand-greenHover text-brand-dark font-extrabold text-lg py-4 rounded-xl transition shadow-[0_0_20px_rgba(34,197,94,0.3)] mt-4">
+                    <button type="submit" data-fs-submit-btn class="w-full bg-brand-green hover:bg-brand-greenHover text-brand-dark font-extrabold text-lg py-4 rounded-xl transition shadow-[0_0_20px_rgba(34,197,94,0.3)] mt-4 disabled:opacity-50 disabled:cursor-not-allowed">
                         Send Me My Free Website &rarr;
                     </button>
                 </form>
@@ -481,5 +488,12 @@
             observer.observe(section);
         });
     </script>
+
+    <!-- Formspree Integration -->
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contact-form', formId: 'xjgqwrov' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

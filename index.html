@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grabsite | Professional Websites for Local Businesses</title>
+    <meta name="description" content="We build professional websites for local businesses. See your site before you pay anything. $500 one-time fee.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0F172A',
+                            green: '#22C55E',
+                            greenHover: '#16a34a'
+                        }
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E\")",
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-white">
+
+    <!-- Navbar -->
+    <header class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-brand-dark/90 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-extrabold text-white tracking-tight">Grabsite<span class="text-brand-green">.</span></a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#work" class="text-sm font-semibold text-slate-300 hover:text-white transition">Work</a>
+                    <a href="#how-it-works" class="text-sm font-semibold text-slate-300 hover:text-white transition">How It Works</a>
+                    <a href="#pricing" class="text-sm font-semibold text-slate-300 hover:text-white transition">Pricing</a>
+                    <a href="#contact" class="bg-brand-green hover:bg-brand-greenHover text-brand-dark font-bold py-2.5 px-5 rounded-lg transition shadow-[0_0_15px_rgba(34,197,94,0.3)]">Get Your Free Site</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-slate-800">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#work" class="block px-3 py-2 text-base font-semibold text-slate-300 hover:text-white">Work</a>
+                <a href="#how-it-works" class="block px-3 py-2 text-base font-semibold text-slate-300 hover:text-white">How It Works</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-semibold text-slate-300 hover:text-white">Pricing</a>
+                <a href="#contact" class="block mt-4 text-center bg-brand-green text-brand-dark font-bold py-3 px-5 rounded-lg">Get Your Free Site</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-brand-dark overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 fade-in-section">
+            <p class="text-brand-green font-bold tracking-wide uppercase text-sm md:text-base mb-4">For Local Service Businesses</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
+                Your competitors are getting customers online.<br/>
+                <span class="text-slate-400">You're not.</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10 font-medium">
+                We build professional websites for local businesses — $500, one time, no monthly fees. See yours for free before you pay anything.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+                <a href="#contact" class="w-full sm:w-auto bg-brand-green hover:bg-brand-greenHover text-brand-dark font-extrabold text-lg py-4 px-8 rounded-lg transition shadow-[0_0_25px_rgba(34,197,94,0.4)]">
+                    See Your Free Website &rarr;
+                </a>
+                <a href="#how-it-works" class="w-full sm:w-auto bg-transparent border-2 border-slate-600 text-white hover:border-slate-400 font-bold text-lg py-3.5 px-8 rounded-lg transition">
+                    How It Works
+                </a>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-slate-400 font-medium text-sm md:text-base">
+                <div class="flex items-center"><span class="text-brand-green mr-2">⚡</span> Built in 5 days</div>
+                <div class="hidden sm:block text-slate-700">|</div>
+                <div class="flex items-center"><span class="text-brand-green mr-2">✓</span> $500 one-time</div>
+                <div class="hidden sm:block text-slate-700">|</div>
+                <div class="flex items-center"><span class="text-brand-green mr-2">🔒</span> See it free first</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Bar / Social Proof -->
+    <section class="py-12 bg-white border-b border-slate-100 fade-in-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold text-slate-400 uppercase tracking-wider mb-8">
+                Trusted by local businesses across the US
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale">
+                <div class="text-xl font-bold font-serif">Sparkle Clean Co.</div>
+                <div class="text-xl font-black italic tracking-tighter">Green Thumb</div>
+                <div class="text-xl font-bold uppercase tracking-widest">Apex HVAC</div>
+                <div class="text-xl font-extrabold text-slate-800">Mike's Plumbing</div>
+                <div class="text-xl font-bold" style="font-family: monospace;">A1 ELECTRIC</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Simple. Fast. No risk.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative fade-in-section">
+                    <div class="text-6xl font-black text-slate-100 absolute top-4 right-6 pointer-events-none">1</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4 relative z-10">We build your site</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg relative z-10">
+                        We research your business, build a professional website, and host it — before you pay anything.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative fade-in-section" style="transition-delay: 100ms;">
+                    <div class="text-6xl font-black text-slate-100 absolute top-4 right-6 pointer-events-none">2</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4 relative z-10">You see it for free</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg relative z-10">
+                        We send you the link. Browse your live website. No commitment, no credit card.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative border-b-4 border-b-brand-green fade-in-section" style="transition-delay: 200ms;">
+                    <div class="text-6xl font-black text-slate-100 absolute top-4 right-6 pointer-events-none">3</div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4 relative z-10">Pay $500, it's yours</h3>
+                    <p class="text-slate-600 leading-relaxed text-lg relative z-10">
+                        One payment. We connect your domain, you go live. Your competitors can't say they didn't see it coming.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Work -->
+    <section id="work" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">What your site could look like</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Project 1 -->
+                <div class="group cursor-pointer fade-in-section">
+                    <div class="bg-slate-100 rounded-t-xl p-3 border border-b-0 border-slate-200 flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                    </div>
+                    <div class="relative overflow-hidden border border-slate-200 border-t-0 rounded-b-xl aspect-[16/10] bg-slate-200">
+                        <img src="https://placehold.co/1200x750/e2e8f0/64748b?text=Cleaning+Service+Mockup" alt="Cleaning Service Website" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/20 transition duration-300 flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 bg-white text-slate-900 font-bold py-2 px-6 rounded-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg">View Live &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900">Sparkle Clean Co.</h4>
+                            <p class="text-slate-500 font-medium">Cleaning Services</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group cursor-pointer fade-in-section" style="transition-delay: 150ms;">
+                    <div class="bg-slate-100 rounded-t-xl p-3 border border-b-0 border-slate-200 flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                    </div>
+                    <div class="relative overflow-hidden border border-slate-200 border-t-0 rounded-b-xl aspect-[16/10] bg-slate-200">
+                        <img src="https://placehold.co/1200x750/e2e8f0/64748b?text=Landscaping+Mockup" alt="Landscaping Website" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/20 transition duration-300 flex items-center justify-center">
+                            <span class="opacity-0 group-hover:opacity-100 bg-white text-slate-900 font-bold py-2 px-6 rounded-lg transform translate-y-4 group-hover:translate-y-0 transition duration-300 shadow-lg">View Live &rarr;</span>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <h4 class="text-xl font-bold text-slate-900">Green Thumb Pros</h4>
+                            <p class="text-slate-500 font-medium">Landscaping</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Everything included. Nothing hidden.</h2>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-start space-x-4 fade-in-section">
+                    <div class="bg-brand-green/10 p-3 rounded-lg text-brand-green">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Custom domain (.com)</h4>
+                        <p class="text-slate-600 text-sm">We buy and set up your professional domain name.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-start space-x-4 fade-in-section">
+                    <div class="bg-brand-green/10 p-3 rounded-lg text-brand-green">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Professional design</h4>
+                        <p class="text-slate-600 text-sm">Clean, modern aesthetic that builds trust instantly.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-start space-x-4 fade-in-section">
+                    <div class="bg-brand-green/10 p-3 rounded-lg text-brand-green">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Mobile-optimized</h4>
+                        <p class="text-slate-600 text-sm">Looks perfect on iPhones and all other devices.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-start space-x-4 fade-in-section">
+                    <div class="bg-brand-green/10 p-3 rounded-lg text-brand-green">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Contact form</h4>
+                        <p class="text-slate-600 text-sm">Customer inquiries go straight to your inbox.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-start space-x-4 fade-in-section">
+                    <div class="bg-brand-green/10 p-3 rounded-lg text-brand-green">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Google-ready</h4>
+                        <p class="text-slate-600 text-sm">Optimized structure so locals can find you in search.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 flex items-start space-x-4 fade-in-section">
+                    <div class="bg-brand-green/10 p-3 rounded-lg text-brand-green">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-1">Live in 5 days</h4>
+                        <p class="text-slate-600 text-sm">We move fast. You're online by next week.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Honest pricing. No surprises.</h2>
+            </div>
+            
+            <div class="max-w-lg mx-auto fade-in-section">
+                <div class="bg-slate-900 text-white rounded-3xl p-10 border border-slate-800 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-green/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                    
+                    <div class="relative z-10 text-center border-b border-slate-800 pb-8 mb-8">
+                        <div class="text-7xl font-black mb-2">$500</div>
+                        <div class="text-slate-400 font-semibold text-lg">One-time payment</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-10 relative z-10">
+                        <li class="flex items-center text-slate-300">
+                            <svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Custom domain (.com)
+                        </li>
+                        <li class="flex items-center text-slate-300">
+                            <svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Professional design
+                        </li>
+                        <li class="flex items-center text-slate-300">
+                            <svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Mobile-optimized
+                        </li>
+                        <li class="flex items-center text-slate-300">
+                            <svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Contact form (leads go to your email)
+                        </li>
+                        <li class="flex items-center text-slate-300">
+                            <svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Google-ready (shows up in search)
+                        </li>
+                        <li class="flex items-center text-slate-300">
+                            <svg class="w-5 h-5 text-brand-green mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            Live in 5 days
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full text-center bg-brand-green hover:bg-brand-greenHover text-brand-dark font-extrabold text-lg py-4 rounded-xl transition shadow-[0_0_20px_rgba(34,197,94,0.3)] relative z-10">
+                        Claim Your Free Preview &rarr;
+                    </a>
+                </div>
+                
+                <p class="text-center mt-6 text-slate-500 font-medium px-4">
+                    Year 2 onwards: <strong class="text-slate-800">$99/year</strong> for domain & hosting renewal. That's it.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA Section -->
+    <section id="contact" class="py-24 bg-brand-dark relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 fade-in-section">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Reply to our email, or reach out directly.</h2>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">We'll send you your free website preview within 24 hours.</p>
+            </div>
+            
+            <div class="bg-white/5 border border-slate-800 backdrop-blur-md p-8 md:p-12 rounded-3xl">
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('In a real setup, this would submit the form!');">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                            <input type="text" id="name" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                            <input type="email" id="email" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="businessName" class="block text-sm font-medium text-slate-300 mb-2">Business Name</label>
+                        <input type="text" id="businessName" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition">
+                    </div>
+                    
+                    <div>
+                        <label for="businessType" class="block text-sm font-medium text-slate-300 mb-2">Business Type</label>
+                        <select id="businessType" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-transparent transition appearance-none">
+                            <option value="">Select your industry...</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="landscaping">Landscaping</option>
+                            <option value="plumbing-hvac">Plumbing / HVAC</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-brand-green hover:bg-brand-greenHover text-brand-dark font-extrabold text-lg py-4 rounded-xl transition shadow-[0_0_20px_rgba(34,197,94,0.3)] mt-4">
+                        Send Me My Free Website &rarr;
+                    </button>
+                </form>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-slate-400">Or email us: <a href="mailto:zach@grabsite.net" class="text-white hover:text-brand-green transition font-medium">zach@grabsite.net</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <a href="#" class="text-2xl font-extrabold text-white tracking-tight block mb-2">Grabsite<span class="text-brand-green">.</span></a>
+                    <p class="text-slate-400 font-medium">Websites for the businesses that keep America running.</p>
+                </div>
+                
+                <div class="flex space-x-8">
+                    <a href="#how-it-works" class="text-slate-400 hover:text-white transition font-medium">How It Works</a>
+                    <a href="#work" class="text-slate-400 hover:text-white transition font-medium">Work</a>
+                    <a href="#pricing" class="text-slate-400 hover:text-white transition font-medium">Pricing</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm">
+                    &copy; 2025 Grabsite. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconPath = document.getElementById('menu-icon-path');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                // Menu icon
+                iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                // X icon
+                iconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                iconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+
+        // Scroll Animation (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
